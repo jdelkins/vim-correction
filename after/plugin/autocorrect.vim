@@ -1,6 +1,6 @@
 " vim:ts=58:
 
-" Name:         autocorrect.vim
+" Name:         correction.vim
 " Author:       Joel D. Elkins <joel@elkins.co>
 " Description:  This contains many of the MS Word 2007 autocorrections, which
 "               I extracted and converted to Abolish commands. See
