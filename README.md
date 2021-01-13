@@ -46,14 +46,18 @@ abolish.vim, then correction.vim will silently fail to load.
 
 * [vim-plug](https://github.com/junegunn/vim-plug)
 
+```viml
     Plug 'tpope/vim-abolish.git'
     Plug 'jdelkins/vim-correction.git'
+```
 
 * [Pathogen](https://github.com/tpope/vim-pathogen)
 
+```shell
     cd ~/.vim/bundle
     git clone git://github.com/tpope/vim-abolish.git
     git clone git://github.com/jdelkins/vim-correction.git
+```
 
 </details>
 
@@ -67,7 +71,9 @@ abolish.vim, then correction.vim will silently fail to load.
 
 * To turn off this plugin quasi-permanently, put this in your `$MYVIMRC`:
 
+```viml
     let g:loaded_autocorrect = 1
+```
 
 * To turn off all insert mode abbreviations temporarily, you can `set paste` in
   your session (there are other effects of this setting -- see `:help paste`).
