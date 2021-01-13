@@ -7,6 +7,9 @@
 "               https://github.com/tpope/vim-abolish (or :h abolish) for more
 "               info on Tim Pope's vim-abolish plugin.
 
+" ensure abolish is loaded first. Note there should be no error (see :h :runtime)
+runtime ALL plugin/abolish.vim
+
 if (exists(":Abolish") != 2) || exists("g:loaded_autocorrect")
   finish
 endif
