@@ -298,6 +298,7 @@ Abolish haveing	having
 Abolish hda	had 
 "Abolish he;ll	he’ll 
 Abolish hearign	hearing 
+Abolish heigth	height
 Abolish helpfull	helpful 
 Abolish herat	heart 
 "Abolish here;s	here’s 
@@ -680,6 +681,7 @@ Abolish whihc	which
 "Abolish who;s	who’s 
 "Abolish who;ve	who’ve 
 Abolish whta	what 
+Abolish widht	width
 Abolish wief	wife 
 Abolish wierd	weird 
 Abolish wihch	which 
