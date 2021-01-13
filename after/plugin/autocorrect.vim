@@ -1,7 +1,7 @@
 " vim:ts=58:
 
 " Name:         correction.vim
-" Author:       Joel D. Elkins <joel@elkins.co>
+" Author:       Joel D. Elkins <joel@elkins.com>
 " Description:  This contains many of the MS Word 2007 autocorrections, which
 "               I extracted and converted to Abolish commands. See
 "               https://github.com/tpope/vim-abolish (or :h abolish) for more
@@ -727,6 +727,7 @@ Abolish youare	you are
 "Abolish your the	you’re the 
 "Abolish your their	you’re their 
 "Abolish your your	you’re your 
+Abolish youre	you're
 Abolish youve	you’ve 
 Abolish ytou	you 
 Abolish yuo{,r}	you{}
