@@ -14,7 +14,7 @@ autocorrect experience to Vim.
 * I use Tim Pope´s [abolish.vim](https://github.com/tpope/vim-abolish) to
   provide even more typo combinations, and also to handle various capitalization
   combinations.
-* With abolish.vim´s help, the script creates "insert abbreviations" (see `:help
+* With abolish´s help, the script creates "insert abbreviations" (see `:help
   abbreviations`) to do its work. Due to Vim´s restrictions on what can be an
   abbreviation, however, some of MS Word´s typos are not transferrable.
   Specifically, multi-word corrections or corrections that contain punctuation
@@ -26,24 +26,53 @@ This plugin requires Tim Pope´s
 [abolish.vim](http://github.com/tpope/vim-abolish) plugin. If it doesn´t find
 abolish.vim, then correction.vim will silently fail to load.
 
-If you don´t have a preferred installation method, I recommend
-installing [pathogen.vim](https://github.com/tpope/vim-pathogen), and
-then simply copy and paste:
+<details><summary>Expand for some installation options</summary>
+
+* [packer.nvim](https://github.com/wbthomason/packer.nvim), using a lazy
+  loading approach to load only on text-like files. This is my current
+  preference, since vim-correction takes on the order of 250 ms to load, and I
+  don't need it on most file types in practice. (This would go in your
+  `plugins.lua` file -- you'll need to read up on packer.nvim if you aren't
+  familiar with it.)
+
+```lua
+    use {
+        'jdelkins/vim-correction',
+        opt = true,
+        ft = {'text', 'markdown', 'gitcommit', 'plaintex', 'tex', 'latex', 'rst', 'asciidoc', 'textile', 'pandoc'},
+        requires = {'tpope/vim-abolish'},
+    }
+```
+
+* [vim-plug](https://github.com/junegunn/vim-plug)
+
+    Plug 'tpope/vim-abolish.git'
+    Plug 'jdelkins/vim-correction.git'
+
+* [Pathogen](https://github.com/tpope/vim-pathogen)
 
     cd ~/.vim/bundle
     git clone git://github.com/tpope/vim-abolish.git
-    git clone git://github.com/jelkins/vim-correction.git
+    git clone git://github.com/jdelkins/vim-correction.git
+
+</details>
 
 ## Turning off
 
-To turn off this plugin quasi-permanently, put this in your .vimrc:
+* To force overriding a particular correction (e.g., you *actually do* want to
+  type `teh`), you can type `<C-v>` just after the word, and just before the
+  space (or quote or other word-ending character). This will avoid the insert
+  abbreviation system for that keystroke, and leave your misspelled word as it
+  is.
+
+* To turn off this plugin quasi-permanently, put this in your `$MYVIMRC`:
 
     let g:loaded_autocorrect = 1
 
-To turn off all insert mode abbreviations temporarily, you can `set paste` in
-your session (there are other effects of this setting -- see `:help paste`).
+* To turn off all insert mode abbreviations temporarily, you can `set paste` in
+  your session (there are other effects of this setting -- see `:help paste`).
 
 ## License
 
-Copyright © 2013 Joel Elkins. Distributed under the same terms as Vim itself.
+Copyright © 2013-2021 Joel Elkins. Distributed under the same terms as Vim itself.
 See `:help license`.
